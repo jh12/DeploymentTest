@@ -1,10 +1,10 @@
-name: ci
-on: 
+name: release
+on:
   push:
-    branches-ignore:
+    branches:
       - main
       - develop
-  pull_request:
+
 
 jobs:
   build:
@@ -21,5 +21,5 @@ jobs:
     - name: Determine Version
       id: gitversion
       uses: gittools/actions/gitversion/execute@v0.9.7
-    - run: | 
-        echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
+    - run: |
+        dotnet nuget add source --username ${{ secrets.RELEASE_USERNAME }} --password ${{ secrets.RELEASE_PAT }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/jh12/index.json"
