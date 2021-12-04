@@ -30,4 +30,4 @@ jobs:
     - name: print directory after
       run: ls
     - name: Push nuget
-      run: dotnet nuget push "DeploymentTest.Nuget\bin\Release\DeploymentTest.Nuget.1.0.0.nupkg" --api-key ${{ secrets.RELEASE_PAT }} --source "github"
+      run: dotnet nuget push "DeploymentTest.Nuget/bin/Release/DeploymentTest.Nuget.1.0.0.nupkg" --api-key ${{ secrets.RELEASE_PAT }} --source "github"
