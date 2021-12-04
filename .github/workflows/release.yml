@@ -22,4 +22,6 @@ jobs:
       id: gitversion
       uses: gittools/actions/gitversion/execute@v0.9.7
     - run: |
-        dotnet nuget add source --username ${{ secrets.RELEASE_USERNAME }} --password ${{ secrets.RELEASE_PAT }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/jh12/index.json"
+        dotnet nuget add source --username ${{ secrets.RELEASE_USERNAME }} --password ${{ secrets.RELEASE_PAT }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/jh12/index.json" | 
+        dotnet pack --configuration Release |
+        dotnet nuget push "bin\Release\DeploymentTest.Nuget.1.0.0.nupkg" --api-key ${{ secrets.RELEASE_PAT }} --source "github"
