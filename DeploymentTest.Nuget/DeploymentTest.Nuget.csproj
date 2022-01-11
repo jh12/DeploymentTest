@@ -1,7 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<PackageId>DeploymentTest.Nuget</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>jh12</Authors>
+		<PackageDescription>This package is for testing deployment setups</PackageDescription>
+		<RepositoryUrl>https://github.com/jh12/DeploymentTest</RepositoryUrl>
+	</PropertyGroup>
 
 </Project>
