@@ -24,7 +24,7 @@ jobs:
     - name: print directory before
       run: ls
     - name: Add nuget source
-      run: dotnet nuget add source --username ${{ secrets.RELEASE_USERNAME }} --password ${{ secrets.RELEASE_PAT }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/jh12/index.json"
+      run: dotnet nuget add source --username ${{ secrets.RELEASE_USERNAME }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/jh12/index.json"
     - name: Pack nuget
       run: dotnet pack --configuration Release
     - name: print directory after
