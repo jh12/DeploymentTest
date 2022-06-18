@@ -2,7 +2,7 @@ name: Release NuGet package
 
 on: 
   workflow_run:
-    workflows: [Build and lint]
+    workflows: ["Build and lint"]
     types: [completed]
     branches: [nuget/net6]
 
