@@ -2,8 +2,8 @@ name: Build and lint
 
 on: 
   push:
-    branches:
-      - '!main'
+    branches-ignore:
+      - 'main'
   pull_request:
 
 jobs:
