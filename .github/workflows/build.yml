@@ -4,6 +4,7 @@ on:
   push:
     branches-ignore:
       - 'main'
+      - 'docker/net6'
   pull_request:
 
 jobs:

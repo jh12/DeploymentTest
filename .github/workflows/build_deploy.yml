@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'docker/net6'
 
 jobs:
   build:
