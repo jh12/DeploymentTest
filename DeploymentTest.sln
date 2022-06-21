@@ -20,7 +20,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build.yml = .github\workflows\build.yml
 		.github\workflows\build_deploy.yml = .github\workflows\build_deploy.yml
-		.github\workflows\build_deploy_arm32.yml = .github\workflows\build_deploy_arm32.yml
 	EndProjectSection
 EndProject
 Global
