@@ -82,7 +82,7 @@ jobs:
         build-args: RELEASE_VERSION=${{ steps.gitversion.outputs.NuGetVersionV2 }}
     # QEMU
     - name: Setup QEMU
-        uses: docker/setup-qemu-action@v1
+      uses: docker/setup-qemu-action@v1
     - name: Build and push arm32v7
       id: docker_arm32v7
       uses: docker/build-push-action@v2
